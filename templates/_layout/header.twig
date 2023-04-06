@@ -1,5 +1,11 @@
 {% set logo = branding.orgLogo.one() %}
 
+{# Navigation Link Variable #}
+{% set links = header.navLink.all() %}
+
+{# Header Button Text #}
+{% set ctaText = header.headerButtonText %}
+
 {% set header = craft.globalSets()
   .handle('branding')
   .with(['orgLogo'])
@@ -10,4 +16,20 @@
 {% set logoUrl = header.orgLogo.collect().first().url() %}
 {% set logoAlt = header.orgLogo.collect().first().altTag %}
 
-<header></header>
+
+<header class="w-screen px-32 py-12 flex justify-between items-center" style="background-color: black;">
+	<div class="header-logo">
+		{% if logoUrl %}
+			<img src="{{ logoUrl }}" alt="{{ logoAlt }}"/>
+		{% endif %}
+	</div>
+	<div class="header-nav">
+		{% for entry in links %}
+			<a class="text-lg uppercase text-white p-3 transition duration-500 hover:text-secondary" href="#">{{entry.navText}}</a>
+		{% endfor %}
+	</div>
+	<div class="header-cta">
+		<a class="button-graident text-xl text-white font-bold uppercase py-4 px-10 rounded-full" href="#">
+			{{ ctaText }}</a>
+	</div>
+</header>
