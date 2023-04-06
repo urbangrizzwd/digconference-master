@@ -3,9 +3,17 @@ module.exports = {
     content: ["./templates/**/*.html", "./templates/**/*.twig"],
     safelist: [],
     theme: {
-        fontFamily: {},
+        fontFamily: {
+            titillium: 'Titillium Web, sans-serif', 
+        },
         extend: {
-            colors: {},
+            colors: {
+                primary: '#1E3358',
+                secondary: '#F15A29',
+                tertiary: '#4D2E90',
+                quaternary: '#EC297B',
+
+            },
             fontSize: {},
         },
     },

@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-
-}
+@layer base {}
 
 @layer components {
     .skip-link {
@@ -18,7 +16,16 @@
         transition: transform 0.3s;
         z-index: 9999;
     }
+
     .skip-link:focus {
         transform: translateY(0%);
+    }
+
+    .button-graident {
+        background: linear-gradient(164deg,
+                #4d2e90 6.48%,
+                #036bac 58.84%,
+                #28a2c6 82.45%,
+                #3ec2d5 97.93%);
     }
 }
