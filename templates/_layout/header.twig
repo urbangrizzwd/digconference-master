@@ -1,0 +1,13 @@
+{% set logo = branding.orgLogo.one() %}
+
+{% set header = craft.globalSets()
+  .handle('branding')
+  .with(['orgLogo'])
+  .collect()
+  .first()
+%}
+
+{% set logoUrl = header.orgLogo.collect().first().url() %}
+{% set logoAlt = header.orgLogo.collect().first().altTag %}
+
+<header></header>

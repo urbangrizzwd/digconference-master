@@ -1,0 +1,11 @@
+{% set footer = craft.globalSets()
+  .handle('branding')
+  .with(['footerLogo'])
+  .collect()
+  .first()
+%}
+
+{% set logoUrl = footer.footerLogo.collect().first().url() %}
+{% set logoAlt = footer.footerLogo.collect().first().altTag %}
+
+<footer></footer>

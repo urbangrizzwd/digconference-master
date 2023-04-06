@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en
+name: 'DIG Conference'
+primary: true
+siteGroup: 7452cb63-b1b9-414b-8e96-4289cc1ada79 # DIG Conference
+sortOrder: 1

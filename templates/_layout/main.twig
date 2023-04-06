@@ -1,0 +1,59 @@
+{# This is the base layout/structure that other templates will extend via the block sections. You're free to modify, but it shouldn't be necessary. #}
+
+{% block htmlPage %}
+
+	{% include "_globals/_scripts.twig" %}
+	<!DOCTYPE html>
+	{% set htmlAttr = {
+		lang: currentSite.language,
+		dir: craft.app.i18n.getLocaleById(currentSite.id).getOrientation(),
+	} %}
+	<html {{attr(htmlAttr)}} class="overflow-x-hidden">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta name="google-site-verification" content="NnywnZhk7HV91QRWS2HeQHlqb-wSISIO2H9Y_UqhVKs"/>
+
+			<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+			{% include "_globals/_critical-css.twig" %}
+
+		</head>
+
+		{% block bodyEl %}
+			{% set bodyAttr = {
+				class: [
+					craft.app.request.isMobileBrowser() ? 'is-mobile' : 'is-desktop',
+				]
+			} %}
+			<body {{ attr(bodyAttr) }}>
+			{% endblock %}
+			{# Skip Links #}
+			<div id="skip-links">
+				<a class="skip-link" href="#main-navigation">{{ 'Skip to Navigation'|t }}</a>
+				<a class="skip-link" href="#content">{{ 'Skip to Content'|t }}</a>
+			</div>
+
+			<div id="site-inner" class="relative flex min-h-screen w-screen flex-col items-center justify-start transform-gpu">
+
+			{{ include('_layout/header.twig')}}
+
+				<main id="content" class="w-full">
+					{# Site content extends from here. #}
+					{% block main %}{% endblock %}
+				</main>
+
+			{{ include('_layout/footer.twig')}}
+
+			</div>
+			{# end #site-inner #}
+
+			{{ endBody() }}
+			{% block footerScripts %}
+				{# If you care to use Sprig, this loads the script. #}
+				{{ sprig.script }}
+			{% endblock %}
+		</body>
+	</html>
+{% endblock %}
+{# end htmlPage #}

@@ -1,0 +1,49 @@
+{% extends "_layout/main.twig" %}
+
+{# Hero Vars #}
+{% set heroH1 = entry.heroHeadlineH1 %}
+{% set heroSubhead = entry.heroSubhead %}
+
+{# Workshop Vars #}
+{% set workshopCat = workshopCat ?? '' %}
+{% set workshopQuery = craft.entries
+    .section("workshops")
+    .limit(8)
+    .relatedTo(workshopCat)
+    .all()
+%}
+
+{% set workshopOptions = craft.categories()
+    .group('workshopOptions')
+    .all()
+%}
+
+{# Event Vars #}
+{% set eventStart = now|date_modify('-2 months')|atom %}
+{% set events = craft.entries
+    .section("events")
+    .date('>= eventStart')
+    .orderBy('date', 'startTime')
+    .limit(3)
+    .all()
+%}
+
+{# News Vars #}
+{% set news = craft.entries
+    .section("news")
+    .limit(3)
+    .orderBy('postDate desc')
+    .all()
+%}
+
+{% block main %}
+    <section id="hero">
+        <div class="hero--wrap">
+            <h1>{{ heroH1 }}</h1>
+            <p>{{ heroSubhead }}</p>
+        </div>
+    </section>
+
+    {# Continue with remaining page code here. #}
+
+{% endblock %}
