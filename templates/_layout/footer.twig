@@ -1,3 +1,8 @@
+{# Navigation Link Variable #}
+{% set footerSocialText = footer.footerSocialText %}
+{% set footerSocialIcons = footer.footerSocialIcons.all() %}
+
+
 {% set footer = craft.globalSets()
   .handle('branding')
   .with(['footerLogo'])
@@ -8,4 +13,16 @@
 {% set logoUrl = footer.footerLogo.collect().first().url() %}
 {% set logoAlt = footer.footerLogo.collect().first().altTag %}
 
-<footer></footer>
+<footer class="w-screen flex justify-between items-center px-32 py-24 ">
+	<div class="">
+		{% if logoUrl %}
+			<img src="{{ logoUrl }}" alt="{{ logoAlt }}"/>
+		{% endif %}
+	</div>
+	<div class="">
+		<p>{{footerSocialText}}</p>
+		{% for footerIcons in footerSocialIcons %}
+			<img src="{{footerIcons.url}}">
+		{% endfor %}
+	</div>
+</footer>
