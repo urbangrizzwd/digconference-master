@@ -29,6 +29,8 @@
     .all()
 %}
 
+{% set eventEntries = events %}
+
 {# News Vars #}
 {% set news = craft.entries
     .section("news")
@@ -36,6 +38,8 @@
     .orderBy('postDate desc')
     .all()
 %}
+
+{% set newsEntries = news %}
 
 {% block main %}
 	{% for heroImage in heroBackground %}
@@ -46,6 +50,23 @@
 			</div>
 		</section>
 	{% endfor %}
-	{# Continue with remaining page code here. #}
+
+	<section class="flex justify-center">
+		<div>
+			{% for entry in eventEntries %}
+				<div>
+                    <p><span>{{entry.date | date("M")}}</span>{{entry.date | date("j")}}</p>
+					<p>{{entry.title}}</p>
+                    <p>{{entry.startTime  | date("g:i a ")}} - {{entry.endTime  | date("g:i a ")}}</p>
+				</div>
+			{% endfor %}
+		</div>
+		<div>
+			{% for entry in newsEntries %}
+				<p>{{entry.title}}</p>
+				<p>{{entry.postDate | date("M d, Y")}}</p>
+			{% endfor %}
+		</div>
+	</section>
 
 {% endblock %}
