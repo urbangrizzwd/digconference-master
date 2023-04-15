@@ -28,4 +28,12 @@
                 #28a2c6 82.45%,
                 #3ec2d5 97.93%);
     }
+
+    .workshop-graident {
+        background: linear-gradient(90deg,
+                #4d2e90 6.48%,
+                #ec297b 58.84%,
+                #ee4747 81.77%,
+                #f05a28 97.93%);
+    }
 }
