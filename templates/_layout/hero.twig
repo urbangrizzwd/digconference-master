@@ -1,0 +1,14 @@
+{# Hero Vars #}
+{% set heroH1 = entry.heroHeadlineH1 %}
+{% set heroSubhead = entry.heroSubhead %}
+{% set heroBackground = entry.heroBackgroundImage.all() %}
+
+
+{% for heroImage in heroBackground %}
+		<section style="background-image: url({{heroImage.url}});" class="flex justify-start h-screen bg-cover bg-no-repeat" id="hero">
+			<div class="px-32 flex flex-col justify-center">
+				<h1 class="2xl:text-9xl text-8xl text-white font-bold tracking-wider">{{ heroH1 }}</h1>
+				<p class="text-xl text-secondary font-bold pt-10 tracking-widest">{{ heroSubhead }}</p>
+			</div>
+		</section>
+	{% endfor %}

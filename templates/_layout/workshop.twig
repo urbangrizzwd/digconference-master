@@ -1,0 +1,36 @@
+{# Workshop Vars #}
+{% set workshopCat = workshopCat ?? '' %}
+{% set workshopQuery = craft.entries
+    .section("workshops")
+    .limit(8)
+    .relatedTo(workshopCat)
+    .all()
+%}
+
+{% set workShopH2 = entry.workshopSectionTitle %}
+
+{% set workSubH2 = entry.workshopSectionSubTitle %}
+
+{% set workshopOptions = craft.categories()
+    .group('workshopOptions')
+    .all()
+%}
+
+<section id="workshop-section" class="max-w-screen-xl m-auto	">
+	<h2 class="pt-20 2xl:text-3xl text-2xl text-white font-bold uppercase">{{workShopH2}}<span class="block pt-2 text-sm font-normal normal-case">{{workSubH2}}</span>
+	</h2>
+
+
+	<div id="workshopfilter" class="flex">
+		{% for cat in workshopOptions %}
+			{% set catIcon = cat.workshopIcon.collect().first().url() %}
+			{% set catIconAlt = cat.workshopIcon.collect().first().altTag %}
+			<div class="flex"><input type="checkbox">
+				<img src="{{catIcon}}" alt="{{catIconAlt}}">
+
+				<p>{{cat.title}}</p>
+			</div>
+		{% endfor %}
+	</div>
+
+</section>

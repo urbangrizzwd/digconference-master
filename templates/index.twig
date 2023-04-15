@@ -1,26 +1,7 @@
 {% extends "_layout/main.twig" %}
 
-{# Hero Vars #}
-{% set heroH1 = entry.heroHeadlineH1 %}
-{% set heroSubhead = entry.heroSubhead %}
-{% set heroBackground = entry.heroBackgroundImage.all() %}
-
-{# Workshop Vars #}
-{% set workshopCat = workshopCat ?? '' %}
-{% set workshopQuery = craft.entries
-    .section("workshops")
-    .limit(8)
-    .relatedTo(workshopCat)
-    .all()
-%}
-
-{% set workshopOptions = craft.categories()
-    .group('workshopOptions')
-    .all()
-%}
-
 {# Event Vars #}
-{% set eventStart = now|date_modify('-2 months')|atom %}
+{# {% set eventStart = now|date_modify('-2 months')|atom %}
 {% set events = craft.entries
     .section("events")
     .date('>= eventStart')
@@ -29,58 +10,31 @@
     .all()
 %}
 
-{% set eventEntries = events %}
+{% set eventEntries = events %} #}
 
 {# News Vars #}
-{% set news = craft.entries
+{# {% set news = craft.entries
     .section("news")
     .limit(3)
     .orderBy('postDate desc')
     .all()
 %}
 
-{% set newsEntries = news %}
+{% set newsEntries = news %} #}
 
 {% block main %}
-	{% for heroImage in heroBackground %}
-		<section style="background-image: url({{heroImage.url}});" class="flex justify-start h-screen bg-cover bg-no-repeat" id="hero">
-			<div class="px-32 flex flex-col justify-center">
-				<h1 class="2xl:text-9xl text-8xl text-white font-bold tracking-wider">{{ heroH1 }}</h1>
-				<p class="text-xl text-secondary font-bold pt-10 tracking-widest">{{ heroSubhead }}</p>
-			</div>
-		</section>
-	{% endfor %}
 
-	<section id="entries-section" class="flex justify-center 2xl:gap-32 gap-9 border-t">
-		<div id="event-block" class="2xl:pb-20 pt-20 ">
-			<h3 class="pb-10 text-white font-bold text-3xl uppercase ">Events</h3>
-			{% for entry in eventEntries %}
-				<div class="flex items-center mb-10 pr-16 pb-5 border-b last:border-0">
-					<div class="h-[68px] w-[71px] py-2 mr-7 text-center bg-white rounded-xl">
-						<p class="text-3xl text-primary font-bold">
-							<span class="block text-base leading-5 font-normal">{{entry.date | date("M")}}</span>
-							{{entry.date | date("j")}}</p>
-					</div>
-					<div>
-						<p class="2xl:text-2xl text-white pb-2  text-lg font-medium font-bold">{{entry.title}}</p>
-						<p class="2xl:text-lg text-white text-sm">{{entry.startTime  | date("g:i a ")}}
-							-
-							{{entry.endTime  | date("g:i a ")}}</p>
-					</div>
-				</div>
-			{% endfor %}
-		</div>
-		<div id="entries-divider" class="divider border-r"></div>
-		<div id="news-block" class="2xl:pb-20 pt-20 ">
-			<h3 class="pb-10 text-white font-bold text-3xl uppercase ">News</h3>
-			{% for entry in newsEntries %}
-				<div class="mb-10 pr-16 pb-5 border-b last:border-0	">
-					<p class="2xl:text-2xl text-white pb-2 text-lg font-medium font-bold">{{entry.title}}</p>
-					<p class="2xl:text-lg text-white text-sm">{{entry.postDate | date("F d, Y")}}</p>
-				</div>
-			{% endfor %}
+	{# Adds Hero Template #}
 
-		</div>
-	</section>
+	{% include "_layout/hero.twig" %}
+
+	{# Adds Workshop Template #}
+
+	{% include "_layout/workshop.twig" %}
+
+	{# Adds entries Template #}
+
+	{% include "_layout/entries.twig" %}
+
 
 {% endblock %}
