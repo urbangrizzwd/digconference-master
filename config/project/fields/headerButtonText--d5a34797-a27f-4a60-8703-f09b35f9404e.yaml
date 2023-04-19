@@ -1,0 +1,19 @@
+columnSuffix: fvgoeajc
+contentColumnType: text
+fieldGroup: b71ae0f5-0f4a-4477-9f0c-3c338ad02d8d # Common
+handle: headerButtonText
+instructions: null
+name: 'Header Button Text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

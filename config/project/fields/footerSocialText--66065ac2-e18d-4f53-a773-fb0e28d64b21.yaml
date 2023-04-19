@@ -1,0 +1,19 @@
+columnSuffix: txrzzplm
+contentColumnType: text
+fieldGroup: 8f2a8a85-dbf7-4bb1-8090-3de22a20ace4 # Globals
+handle: footerSocialText
+instructions: null
+name: 'Footer Social Text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

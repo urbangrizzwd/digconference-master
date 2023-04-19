@@ -1,0 +1,43 @@
+fieldLayouts:
+  c5c87a58-cc4b-41bf-9462-4f04df6d2a41:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 1fb9fcf7-040f-48d3-bf35-5feac374763d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f1ea74df-594f-4e44-ba43-dbae61bae4fe
+        userCondition: null
+handle: schedule
+hasTitleField: false
+name: Schedule
+section: 45edb7da-5256-4321-8729-0c4f9b3fe9d1 # Schedule
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

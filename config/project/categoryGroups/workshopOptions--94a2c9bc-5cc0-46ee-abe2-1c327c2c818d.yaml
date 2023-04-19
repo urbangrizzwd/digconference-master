@@ -3,6 +3,7 @@ fieldLayouts:
   97b33eb0-f3a7-4277-b54f-416f5d9e266a:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -10,6 +11,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -25,10 +27,25 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
+            uid: b1c32990-27e3-4438-ac71-4149fa616eb6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a0e3fecf-1747-4079-8a4a-3079b077a6a7 # Workshop Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 67a817f2-3168-4cf8-be63-b836c6bb30bd
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 9f0c6595-6950-47b6-8a4f-7382796bce88
+        userCondition: null
 handle: workshopOptions
 name: 'Workshop Options'
 siteSettings:

@@ -2,6 +2,7 @@ fieldLayouts:
   8e1da8f7-fbf4-4207-9dfe-bcdbbe226ae4:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -24,19 +26,37 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0e90611f-61fe-44b3-a02b-af79df559a41
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: de6da1a6-867d-4e20-b532-29a8b37faff0 # Workshop Category
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: e3430382-2989-404e-b048-930f8e922fae
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a0e3fecf-1747-4079-8a4a-3079b077a6a7 # Workshop Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bf6d0d38-bff6-490e-aa3a-2a7922a3dc4d
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 369c0d51-2296-41fd-846b-8c4428974efb
+        userCondition: null
 handle: workshops
 hasTitleField: true
 name: Workshops

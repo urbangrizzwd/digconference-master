@@ -2,6 +2,7 @@ fieldLayouts:
   6ad2ef42-7da6-4bd1-97d4-1a22967a53a1:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,6 +10,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
             instructions: null
             label: null
@@ -24,28 +26,95 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a76118b0-67fa-4dc0-9cd0-2b4aa67b5c13
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
+            type: craft\fieldlayoutelements\LineBreak
+            uid: 6b5a520a-e092-4299-be72-31f7258fc3ed
+            userCondition: null
+          -
+            elementCondition: null
+            heading: 'Hero Section'
+            type: craft\fieldlayoutelements\Heading
+            uid: 9f24aa85-84e0-48a4-9663-ef9ef131404b
+            userCondition: null
+          -
+            elementCondition: null
             fieldUid: 09b66cbd-79da-423b-a032-8e557c20a47f # Hero Headline (h1)
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 67f8b88c-a270-40a2-87b5-fac7e7ae91bc
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 9dba5aaf-a7b7-4b18-94de-6480f73ffe8f # Hero Subhead
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: bfd5d52a-cbc2-415f-962c-3e3f169feac1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9e6501f6-bc82-4e48-af5f-d67a4b7b4c76 # Hero Background Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a882bde6-f438-41ec-826b-4b7a62effd6e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\LineBreak
+            uid: baee1676-cb60-4f24-9901-7fd565b1d195
+            userCondition: null
+          -
+            elementCondition: null
+            heading: 'Workshop Section'
+            type: craft\fieldlayoutelements\Heading
+            uid: 49595871-6b89-4aa1-a60d-c3c53670dd9c
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: e94a67dc-a8c6-464f-a33a-ae0bcb75f197 # Workshop Section Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 04e36b1a-5731-41f7-b8e0-ba159e8eedcd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a3028e33-347a-4cb6-b769-2ee7655dbbb7 # Workshop Section Sub Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9e1ff381-c5ab-4d4f-9d17-22c4c6abf2ca
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: fd3caf80-072e-48aa-b233-7078df834eed
+        userCondition: null
 handle: home
 hasTitleField: false
 name: Home

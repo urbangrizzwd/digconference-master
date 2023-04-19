@@ -1,0 +1,19 @@
+columnSuffix: wozbdjhr
+contentColumnType: text
+fieldGroup: d8e2337d-f0d9-427b-891c-2c80172d9473 # Workshops
+handle: workshopSectionTitle
+instructions: null
+name: 'Workshop Section Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,9 +1,16 @@
-dateModified: 1680104163
+dateModified: 1681591984
 email:
   fromEmail: wolfhoelscher@gmail.com
   fromName: 'DIG Conference'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
+  genral:
+    hasUrls: true
+    name: Genral
+    settings:
+      path: '@webroot/assets/general'
+    type: craft\fs\Local
+    url: '@web/assets/general'
   logos:
     hasUrls: true
     name: logos
@@ -16,8 +23,11 @@ meta:
     0b2c19fa-2230-4389-bba3-bb254a308b66: 'Organization Logo' # Organization Logo
     0e0adc44-6b95-4f80-b769-844d1c551b50: Home # Home
     1b4a32f2-2de8-4a8d-8208-58b3c45d9da1: Default # Default
+    1b6c7aee-48a5-4c76-80fb-7e62e4ef2b47: Schedule # Schedule
+    2ad5370c-2568-4115-bac2-f60878116dcf: 'Link Destination' # Link Destination
     3a566891-a13e-4afd-b861-dbb70617c06f: Home # Home
     3c073182-f385-4f69-9d7e-09d570f452b2: 'Start Time' # Start Time
+    03cd1150-f5a5-4765-a047-370235c7f906: 'Nav Link' # Nav Link
     5e1a2be2-d470-49ee-8b38-bd0922219a84: Home # Home
     7c06fcf9-1581-471a-882f-9048a934814a: Branding # Branding
     8a3661ac-e890-4b8d-ae18-c80a5e821dc8: 'End Time' # End Time
@@ -25,24 +35,42 @@ meta:
     8f2a8a85-dbf7-4bb1-8090-3de22a20ace4: Globals # Globals
     09b66cbd-79da-423b-a032-8e557c20a47f: 'Hero Headline (h1)' # Hero Headline (h1)
     9dba5aaf-a7b7-4b18-94de-6480f73ffe8f: 'Hero Subhead' # Hero Subhead
+    9e6501f6-bc82-4e48-af5f-d67a4b7b4c76: 'Hero Background Image' # Hero Background Image
     9e958346-5830-4e4e-83a9-8782cb80dd70: Default # Default
     9edfd08f-a121-4075-888e-1184c893ecc3: News # News
+    14f9a758-3168-45d2-b726-32bc3a4eba8d: About # About
     35ee41a8-521e-4670-8ff9-0a988d4bf1d1: Assets # Assets
+    45edb7da-5256-4321-8729-0c4f9b3fe9d1: Schedule # Schedule
     45f36e39-a33d-480a-b301-8490c3826065: Date # Date
     94a2c9bc-5cc0-46ee-abe2-1c327c2c818d: 'Workshop Options' # Workshop Options
+    3188ac6b-053e-4727-bd48-a00789d5729f: 'Link Text' # Link Text
     6557ba0c-1632-484f-ae2e-ab7f22b55066: News # News
     7452cb63-b1b9-414b-8e96-4289cc1ada79: 'DIG Conference' # DIG Conference
+    7805bc33-4c03-4dae-bbe7-22fc0579f1ad: Footer # Footer
+    66065ac2-e18d-4f53-a773-fb0e28d64b21: 'Footer Social Text' # Footer Social Text
+    a0e3fecf-1747-4079-8a4a-3079b077a6a7: 'Workshop Icon' # Workshop Icon
+    a3028e33-347a-4cb6-b769-2ee7655dbbb7: 'Workshop Section Sub Title' # Workshop Section Sub Title
     a5744892-cefc-4ba8-9b73-1f6a864889c5: Events # Events
     ab72d918-6eef-4db5-8cbd-f685cfedbb9f: 'Alt Tag' # Alt Tag
+    b1c64a34-7982-415d-8a93-556a9a1a9924: General # General
     b4cc5457-0dc9-4b17-b46a-5d150cc4cd67: Workshops # Workshops
     b22bf838-bae2-4ce7-a9c7-c9be49ce3cb9: Logos # Logos
     b71ae0f5-0f4a-4477-9f0c-3c338ad02d8d: Common # Common
+    c82e8791-434a-4f2d-981b-dbc081d699c0: About # About
     c819cbe2-c3b3-440f-920f-40cda13e406b: 'Organization Name' # Organization Name
+    c706176e-1b64-409d-b4fb-7271005ffeb6: 'Nav Link' # Nav Link
     cd901ed7-4538-46c2-bb9f-87a94182e14f: Workshops # Workshops
+    d5a34797-a27f-4a60-8703-f09b35f9404e: 'Header Button Text' # Header Button Text
+    d8e5edea-cd5d-4bd5-bc7d-2a65922b286e: 'Footer Social Icons' # Footer Social Icons
     d8e2337d-f0d9-427b-891c-2c80172d9473: Workshops # Workshops
     d9fe5eee-fd03-438e-8e5b-4a3825748f8d: Events # Events
+    d1049090-febf-4129-b789-cd949fd4eb68: 'Link Text' # Link Text
     dc7de2e2-0271-457c-96d8-17fc50854f46: 'Footer Logo' # Footer Logo
+    ddf348a1-cd6e-4339-a5d8-969d71c2427f: Header # Header
     de6da1a6-867d-4e20-b532-29a8b37faff0: 'Workshop Category' # Workshop Category
+    e94a67dc-a8c6-464f-a33a-ae0bcb75f197: 'Workshop Section Title' # Workshop Section Title
+    ec0b1c8e-0aff-4482-92d4-121366a6bbe3: 'Nav Text' # Nav Text
+    f101b370-60d2-4cdc-af0c-90d05ff648b6: 'Link Destination' # Link Destination
     f399f771-94d2-4947-b646-5167ef3e7739: 'DIG Conference' # DIG Conference
 plugins:
   sprig:
