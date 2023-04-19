@@ -1,27 +1,5 @@
 {% extends "_layout/main.twig" %}
 
-{# Event Vars #}
-{# {% set eventStart = now|date_modify('-2 months')|atom %}
-{% set events = craft.entries
-    .section("events")
-    .date('>= eventStart')
-    .orderBy('date', 'startTime')
-    .limit(3)
-    .all()
-%}
-
-{% set eventEntries = events %} #}
-
-{# News Vars #}
-{# {% set news = craft.entries
-    .section("news")
-    .limit(3)
-    .orderBy('postDate desc')
-    .all()
-%}
-
-{% set newsEntries = news %} #}
-
 {% block main %}
 
 	{# Adds Hero Template #}

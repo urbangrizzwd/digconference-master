@@ -16,7 +16,6 @@
 {% set logoUrl = header.orgLogo.collect().first().url() %}
 {% set logoAlt = header.orgLogo.collect().first().altTag %}
 
-
 <header class="fixed w-screen px-32 py-12 flex justify-between items-center">
 	<div class="header-logo">
 		{% if logoUrl %}
@@ -29,7 +28,7 @@
 		{% endfor %}
 	</div>
 	<div class="header-cta">
-		<a class="button-graident text-xl text-white font-bold uppercase py-4 px-10 rounded-full" href="#">
+		<a class="button-graident text-xl text-white font-bold uppercase py-4 px-10 rounded-full grow " href="#">
 			{{ ctaText }}</a>
 	</div>
 </header>

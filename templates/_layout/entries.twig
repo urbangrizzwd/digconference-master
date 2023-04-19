@@ -20,8 +20,8 @@
 
 {% set newsEntries = news %}
 	 
-    <section id="entries-section" class="flex justify-center 2xl:gap-32 gap-9 border-t">
-		<div id="event-block" class="2xl:pb-20 pt-20 ">
+    <section class="entries-section flex justify-center 2xl:gap-32 gap-9 border-t">
+		<div class="event-block 2xl:pb-20 pt-20 ">
 			<h3 class="pb-10 text-white font-bold text-3xl uppercase ">Events</h3>
 			{% for entry in eventEntries %}
 				<div class="flex items-center mb-10 pr-16 pb-5 border-b last:border-0">
@@ -39,8 +39,8 @@
 				</div>
 			{% endfor %}
 		</div>
-		<div id="entries-divider" class="divider border-r"></div>
-		<div id="news-block" class="2xl:pb-20 pt-20 ">
+		<div class="entries-divider divider border-r"></div>
+		<div class="news-block 2xl:pb-20 pt-20 ">
 			<h3 class="pb-10 text-white font-bold text-3xl uppercase ">News</h3>
 			{% for entry in newsEntries %}
 				<div class="mb-10 pr-16 pb-5 border-b last:border-0	">
